@@ -31,7 +31,43 @@
           </ul>
         </div><!-- /.navbar -->
       </div> <!-- /.container -->
-   </section>
+    </section>
+    <div class = "row">
+      <div class = "col-md-6 col-md-offset-3">
+      	<h2> USACO Submission</h2>
+        <form class="submission" method="POST" action="current/tpcm/submit-solution.php" enctype="multipart/form-data">
+          <div id="solution">
+            <input type="hidden" name="cpid" value="532"/>
+            <div class="field2">
+              <label for="language">Language:</label>
+              <select name="language">
+                <option value='1'>C</option>
+                <option value='2'>C++</option>
+                <option value='6'>C++11</option>
+                <option value='5'>Java</option>
+                <option value='8'>Pascal</option>
+                <option value='3'>Python 2.7.6</option>
+                <option value='4'>Python 3.4.0</option>
+              </select>
+            </div>
+            <div class="field2">
+              <label for="sourcefile">Source File:</label>
+              <input name="sourcefile" size="50" type="file" class="required"/>
+            </div>
+            <div class="field2">
+              <input name="solution-submit" id="solution-submit" type="submit" value="Submit Solution"/>
+            </div>
+          </div>
+        </form>
+        <br><br><br><br>
+        <h2> My Submission</h2>
+        <form action= "upload.php" method="post" enctype= "multipart/form-data">
+		  <input type = "file" name = "file">
+		  <input type = "submit" value = "Upload">
+		</form>
+      </div>
+   </div>
+
    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
