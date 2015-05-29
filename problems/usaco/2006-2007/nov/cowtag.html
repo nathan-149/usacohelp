@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>|USACOHelp|</title>
+		<link rel="icon" type="image/png" href="https://michael153.github.io/usacohelp/Icons/favicon.png">
+		<meta name="description" content="My Personal Website">
+
+		<meta property="og:title" content="|USACOHelp|"/>
+		<meta property="og:description" content="USACO Help Website"/>
+		<meta name="keywords" content="michael153, michael wan, michaelwan, michaelwan2000, usacohelp, USACO, USACO Help">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/bootstrap.css" media="screen">
+
+		<style>
+			.navbar-inverse { }
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">michael153</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="problems.html">Problems</a></li>
+						<li><a href="#">Submit</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+				<h2> Serious Cow Tag (cowtag) </h2>
+				<h4> Johan Wiggins, 2002 </h4>
+				<br><br>
+				Farmer John's N (1 &le; N &le; 1000) cows (conveniently numbered 1..N) are going to play a game of Serious Cow Tag. In Serious Cow Tag, each cow chooses a grid point in the pasture (-7500 &le; X &le; 7500, -7500 &le; Y &le; 7500) such that the distances between all pairs of cows are unique.
+				The cows play in turn, starting with cow #1 and continuing with cows #2, #3, and so on (as long as the cow is still in the game). When it is a cow's turn to play, she finds the nearest cow still playing, ambles over to that cow to tag her, and then returns to her original location. As soon as a cow is tagged, she is out of the game.
+				The game ends when only one cow remains, and she is declared the winner.
+				Farmer John is taking bets with neighboring farmers as to which cow will win, so he would like to know the winner in advance. Write a program that will read a description of the cows' positions and determine the winner.
+				<h4><b>Input</b></h4>
+				* Line 1: A single integer N, the number of cows <br>
+				* Lines 2..N + 1: Line i+1 contains two space-separated integers that describe the location of cow i. <br>
+				<br>
+				<h4><b>Output</b></h4>
+				* Line 1: The number of the winning cow.<br>
+				<br>
+				<h4><b>Sample Input</b></h4>
+				<tt>
+					3<br>
+					0 0<br>
+					0 3<br>
+					4 3<br>
+				</tt>
+				<br>
+				<h4><b>Sample Output</b></h4>
+				<tt>
+					3
+				</tt>
+				<br>
+				<h4><b>Input Details</b></h4>
+				Three cows at (0, 0), (0, 3) and (4, 3).<br>
+				<br>
+				<h4><b>Output Details</b></h4>
+				Cow 1 goes first and tags the nearest cow, cow 2. Cow 2 is eliminated so she does not get a turn. Cow 3 then tags the only remaining cow, cow 1. She is the last cow left, so she wins.
+				<br>
+				<br>
+			</div>
+		</div>
+	</body>
+</html>
+
 
