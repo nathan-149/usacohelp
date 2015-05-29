@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>|USACOHelp|</title>
+		<link rel="icon" type="image/png" href="https://michael153.github.io/usacohelp/Icons/favicon.png">
+		<meta name="description" content="My Personal Website">
+
+		<meta property="og:title" content="|USACOHelp|"/>
+		<meta property="og:description" content="USACO Help Website"/>
+		<meta name="keywords" content="michael153, michael wan, michaelwan, michaelwan2000, usacohelp, USACO, USACO Help">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/bootstrap.css" media="screen">
+
+		<style>
+			.navbar-inverse { }
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">michael153</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="problems.html">Problems</a></li>
+						<li><a href="#">Submit</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+				<br><br>
+				The cows are beside themselves: Farmer John has decided to use RFID tags instead of branding the cows with red-hot irons that cause intense pain.
+				The RFID tags contain a code that is <i>N</i> (3 &le; <i>N</i> &le; 15) characters (each in the range 'A'..'Z') in length. No character appears twice in the code. The character chosen for any given position in the code is chosen from a supplied set for that position. The set is always given in alphabetical order.
+				A machine generates the codes in alphabetical order. Each new batch of cows uses the next unused set of codes. FJ keeps track of the number of codes he has already used.
+				Help FJ confirm the RFID brands to be used for the next set of cows. Given the count of the starting and finishing brands (1 &le; <i>start</i> &lt; <i>finish</i> &le; 22,000,000 and <i>finish</i> - <i>start</i> &lt; 2000), print (in alphabetical order) the brands that will be used. See the I/O specifications for an example.<br>
+				<br>
+				<h4><b>Input</b></h4>
+				* Line 1: Three space-separated integers, respectively: N, start, and finish.<br>
+				* Lines 2..N + 1: Line i+1 contains a number (1..26) of characters that are the valid characters for position i in the RFID code<br>
+				<br>
+				<h4><b>Output</b></h4>
+				* Lines 1..finish-start+1: Line i contains RFID code # start + i - 1<br>
+				<br>
+				<h4><b>Sample Input</b></h4>
+				<tt>
+					4 6 13<br>
+					ABC<br>
+					CDELQ<br>
+					CFH<br>
+					ABC<br>
+				</tt>
+				<br>
+				<h4><b>Sample Output</b></h4>
+				<tt>
+					ADHB<br>
+					ADHC<br>
+					AECB<br>
+					AEFB<br>
+					AEFC<br>
+					AEHB<br>
+					AEHC<br>
+					ALCB<br>
+				</tt>
+				<br>
+				<h4><b>Input Details</b></h4>
+				Four positions in the RFID code; print the 6th through 13th codes.<br>
+				<br>
+				<h4><b>Output Details</b></h4>
+				Here are the first 20 codes:<br>
+				<br>
+				<tt>
+					1 ACFB&nbsp;&nbsp;&nbsp;&nbsp;5 ADFC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9 AEFB&nbsp;&nbsp;&nbsp;&nbsp;13 ALCB&nbsp;&nbsp;&nbsp;&nbsp;17 ALHC<br>
+					2 ACHB&nbsp;&nbsp;&nbsp;&nbsp;6 ADHB&nbsp;&nbsp;&nbsp;&nbsp;10 AEFC&nbsp;&nbsp;&nbsp;&nbsp;14 ALFB&nbsp;&nbsp;&nbsp;&nbsp;18 AQCB<br>
+					3 ADCB&nbsp;&nbsp;&nbsp;&nbsp;7 ADHC&nbsp;&nbsp;&nbsp;&nbsp;11 AEHB&nbsp;&nbsp;&nbsp;&nbsp;15 ALFC&nbsp;&nbsp;&nbsp;&nbsp;19 AQFB<br>
+					4 ADFB&nbsp;&nbsp;&nbsp;&nbsp;8 AECB&nbsp;&nbsp;&nbsp;&nbsp;12 AEHC&nbsp;&nbsp;&nbsp;&nbsp;16 ALHB&nbsp;&nbsp;&nbsp;&nbsp;20 AQFC<br>
+				</tt>
+				<br> <!-- add extra spacing to allow the text to "breathe" more -->
+				<br>
+			</div>
+		</div>
+	</body>
+</html>
 
