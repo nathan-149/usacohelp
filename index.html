@@ -21,6 +21,21 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 		<style>
 			.navbar-inverse { }
+			/* The animation code */
+			@keyframes example
+			{
+    			0%   {left: -500px;}
+    			10%  {left: 0px;}
+    			100% {left: 0px;}
+			}
+
+			/* The element to apply the animation to */
+			.jumbotron
+			{
+				position: relative;
+				animation-name: example;
+				animation-duration: 10s;
+			} 
 		</style>
 	</head>
 
