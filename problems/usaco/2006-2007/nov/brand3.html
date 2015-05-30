@@ -55,7 +55,7 @@
 				<h4> Rob Kolstad, 2006 </h4>
 				<br><br>
 				The cows are beside themselves: Farmer John has decided to use RFID tags instead of branding the cows with red-hot irons that cause intense pain.
-				The RFID tags contain a code that is <i>N</i> (3 &le; <i>N</i> &le; 15) characters (each in the range 'A'..'Z') in length. No character appears twice in the code. The character chosen for any given position in the code is chosen from a supplied set for that position. The set is always given in alphabetical order.
+				The RFID tags contain a code that is N (3 &le; N &le; 15) characters (each in the range 'A'..'Z') in length. No character appears twice in the code. The character chosen for any given position in the code is chosen from a supplied set for that position. The set is always given in alphabetical order.
 				A machine generates the codes in alphabetical order. Each new batch of cows uses the next unused set of codes. FJ keeps track of the number of codes he has already used.
 				Help FJ confirm the RFID brands to be used for the next set of cows. Given the count of the starting and finishing brands (1 &le; <i>start</i> &lt; <i>finish</i> &le; 22,000,000 and <i>finish</i> - <i>start</i> &lt; 2000), print (in alphabetical order) the brands that will be used. See the I/O specifications for an example.<br>
 				<br>
@@ -64,7 +64,7 @@
 				* Lines 2..N + 1: Line i+1 contains a number (1..26) of characters that are the valid characters for position i in the RFID code<br>
 				<br>
 				<h4><b>Output</b></h4>
-				* Lines 1..finish-start+1: Line i contains RFID code # start + i - 1<br>
+				* Lines 1..<i>finish</i>-<i>start</i>+1: Line i contains RFID code # <i>start</i> + i - 1<br>
 				<br>
 				<h4><b>Sample Input</b></h4>
 				<tt>
