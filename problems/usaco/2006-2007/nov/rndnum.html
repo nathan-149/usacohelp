@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>|USACOHelp|</title>
+		<link rel="icon" type="image/png" href="https://michael153.github.io/usacohelp/Icons/favicon.png">
+		<meta name="description" content="My Personal Website">
+
+		<meta property="og:title" content="|USACOHelp|"/>
+		<meta property="og:description" content="USACO Help Website"/>
+		<meta name="keywords" content="michael153, michael wan, michaelwan, michaelwan2000, usacohelp, USACO, USACO Help">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/bootstrap.css" media="screen">
+
+		<style>
+			.navbar-inverse { }
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://michael153.github.io/usacohelp/index.html">USACOHelp</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="http://michael153.github.io/usacohelp/index.html">Home</a></li>
+						<li><a href="http://michael153.github.io/usacohelp/problems.html">Problems</a></li>
+						<li><a href="#">Submit</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+				<h2> Round Numbers (rndnum) </h2>
+				<h4> ICPSC, 1981 </h4>
+				<br><br>	
+				The cows, as you know, have no fingers or thumbs and thus are unable to play 'Scissors, Paper, Stone' (also known as 'Rock, Paper, Scissors', 'Ro, Sham, Bo', and a host of other names)in order to make arbitrary decisions such as who gets to be milked first. They can't even flip a coin because it's so hard to toss using hooves. They have thus resorted to "round number" matching. The first cow picks an integer less than two billion. The second cow does the same. If the numbers are both "round numbers", the first cow wins, otherwise the second cow wins. A positive integer N is said to be a "round number" if the binary representation of N has as many or more zeroes than it has ones. For example, the integer 9, when written in binary form, is 1001. 1001 has two zeroes and two ones; thus, 9 is a round number. The integer 26 is 11010 in binary; since it has two zeroes and three ones, it is not a round number.Obviously, it takes cows a while to convert numbers to binary, so the winner takes a while to determine.<br>
+				<br>
+				Bessie wants to cheat and thinks she can do that if she knows how many "round numbers" are in a given range. Help her by writing a program that tells how many round numbers appear in the inclusive range given by the input (1 &le; <i>Start</i> &lt; <i>Finish</i> &le; 2,000,000,000).<br>
+				<br>
+				<h4><b>Time Limit</b></h4>
+				1 second<br>
+				<br>
+				<h4><b>Input</b></h4>
+				* Line 1: Two space-separated integers, respectively <i>Start</i> and <i>Finish</i><br>
+				<br>
+				<h4><b>Output</b></h4>
+				* Line 1: A single integer that is the count of round numbers in the inclusive range <i>Start</i>...<i>Finish</i><br>
+				<br>
+				<h4><b>Sample Input</b></h4>
+				<tt>
+					2 12<br>
+				</tt>
+				<br>
+				<h4><b>Sample Output</b></h4>
+				<tt>
+					6<br>
+				</tt>
+				<br>
+				<h4><b>Output Details</b></h4>
+					&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp;1x0&nbsp;&nbsp;+&nbsp;&nbsp;1x1&nbsp;&nbsp;&nbsp;&nbsp;ROUND<br>
+					&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;&nbsp;0x0&nbsp;&nbsp;+&nbsp;&nbsp;2x1&nbsp;&nbsp;&nbsp;&nbsp;NOT&nbsp;&nbsp;round<br>
+					&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100&nbsp;&nbsp;&nbsp;&nbsp;2x0&nbsp;&nbsp;+&nbsp;&nbsp;1x1&nbsp;&nbsp;&nbsp;&nbsp;ROUND<br>
+					&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;101&nbsp;&nbsp;&nbsp;&nbsp;1x0&nbsp;&nbsp;+&nbsp;&nbsp;2x1&nbsp;&nbsp;&nbsp;&nbsp;NOT&nbsp;&nbsp;round<br>
+					&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110&nbsp;&nbsp;&nbsp;&nbsp;1x0&nbsp;&nbsp;+&nbsp;&nbsp;2x1&nbsp;&nbsp;&nbsp;&nbsp;NOT&nbsp;&nbsp;round<br>
+					&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;111&nbsp;&nbsp;&nbsp;&nbsp;0x0&nbsp;&nbsp;+&nbsp;&nbsp;3x1&nbsp;&nbsp;&nbsp;&nbsp;NOT&nbsp;&nbsp;round<br>
+					&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;1000&nbsp;&nbsp;&nbsp;&nbsp;3x0&nbsp;&nbsp;+&nbsp;&nbsp;1x1&nbsp;&nbsp;&nbsp;&nbsp;ROUND<br>
+					&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;1001&nbsp;&nbsp;&nbsp;&nbsp;2x0&nbsp;&nbsp;+&nbsp;&nbsp;2x1&nbsp;&nbsp;&nbsp;&nbsp;ROUND<br>
+					10&nbsp;&nbsp;&nbsp;&nbsp;1010&nbsp;&nbsp;&nbsp;&nbsp;2x0&nbsp;&nbsp;+&nbsp;&nbsp;2x1&nbsp;&nbsp;&nbsp;&nbsp;ROUND<br>
+					11&nbsp;&nbsp;&nbsp;&nbsp;1011&nbsp;&nbsp;&nbsp;&nbsp;1x0&nbsp;&nbsp;+&nbsp;&nbsp;3x1&nbsp;&nbsp;&nbsp;&nbsp;NOT&nbsp;&nbsp;round<br>
+					12&nbsp;&nbsp;&nbsp;&nbsp;1100&nbsp;&nbsp;&nbsp;&nbsp;2x0&nbsp;&nbsp;+&nbsp;&nbsp;2x1&nbsp;&nbsp;&nbsp;&nbsp;ROUND<br>
+				<br> <!-- add extra spacing to allow the text to "breathe" more -->
+				<br>
+			</div>
+		</div>
+	</body>
+</html>
+
+
 
