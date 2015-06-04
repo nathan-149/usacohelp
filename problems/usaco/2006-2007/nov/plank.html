@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>|USACOHelp|</title>
+		<link rel="icon" type="image/png" href="https://michael153.github.io/usacohelp/Icons/favicon.png">
+		<meta name="description" content="My Personal Website">
+
+		<meta property="og:title" content="|USACOHelp|"/>
+		<meta property="og:description" content="USACO Help Website"/>
+		<meta property="og:image" content="http://michael153.github.io/usacohelp/Icons/favicon.png"/>
+		<meta name="keywords" content="michael153, michael wan, michaelwan, michaelwan2000, usacohelp, USACO, USACO Help">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/bootstrap.css" media="screen">
+
+		<style>
+			.navbar-inverse { }
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://michael153.github.io/usacohelp/index.html">USACOHelp</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="http://michael153.github.io/usacohelp/index.html">Home</a></li>
+						<li><a href="http://michael153.github.io/usacohelp/problems.html">Problems</a></li>
+						<li><a href="#">Submit</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+				<h2> Fence Repair (plank) </h2>
+				<h4> Richard Ho, 2006 </h4>
+				<br><br>
+				Farmer John wants to repair a small length of the fence around the pasture. He measures the fence and finds that he needs <i>N</i> (1 &le; <i>N</i> &le; 20,000) planks of wood, each having some integer length <i>Li</i> (1 &le; <i>Li</i> &le; 50,000) units. He then purchases a single long board just long enough to saw into the <i>N</i> planks (i.e., whose length is the sum of the lengths <i>Li</i>). FJ is ignoring the "kerf", the extra length lost to sawdust when a sawcut is made; you should ignore it, too. FJ sadly realizes that he doesn't own a saw with which to cut the wood, so he mosies over to Farmer Don's Farm with this long board and politely asks if he may borrow a saw. Farmer Don, a closet capitalist, doesn't lend FJ a saw but instead offers to charge Farmer John for each of the <i>N</i>-1 cuts in the plank. The charge to cut a piece of wood is exactly equal to its length. Cutting a plank of length 21 costs 21 cents. Farmer Don then lets Farmer John decide the order and locations to cut the plank. Help Farmer John determine the minimum amount of money he can spend to create the <i>N</i> planks. FJ knows that he can cut the board in various different orders which will result in different charges since the resulting intermediate planks are of different lengths. <br>
+				<br>
+				<h4><b>Time Limit</b></h4>
+				1 second<br>
+				<br>
+				<h4><b>Input</b></h4>
+				* Line 1: One integer <i>N</i>, the number of planks Lines 2..<i>N</i>+1: Each line contains a single integer describing the length of a needed plank<br>
+				<br>
+				<h4><b>Output</b></h4>
+				* Line 1: One integer: the minimum amount of money he must spend to make <i>N</i>-1 cuts<br>
+				<br>
+				<h4><b>Sample Input</b></h4>
+				<tt>
+					3<br>
+					8<br>
+					5<br>
+					8<br>
+				</tt>
+				<br>
+				<h4><b>Sample Output</b></h4>
+				<tt>
+					34<br>
+				</tt>
+				<br>
+				<h4><b>Input Details</b></h4>
+				He wants to cut a board of length 21 into pieces of lengths 8, 5, and 8. <br>
+				<br>
+				<h4><b>Output Details</b></h4>
+				The original board measures 8+5+8=21. The first cut will cost 21, and should be used to cut the board into pieces measuring 13 and 8. The second cut will cost 13, and should be used to cut the 13 into 8 and 5. This would cost 21+13=34. If the 21 was cut into 16 and 5 instead, the second cut would cost 16 for a total of 37 (which is more than 34). <br>
+				<br>
+				<br>
+			</div>
+		</div>
+	</body>
+</html>
+
+
 

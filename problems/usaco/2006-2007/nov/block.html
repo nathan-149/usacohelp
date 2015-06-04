@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>|USACOHelp|</title>
+		<link rel="icon" type="image/png" href="https://michael153.github.io/usacohelp/Icons/favicon.png">
+		<meta name="description" content="My Personal Website">
+
+		<meta property="og:title" content="|USACOHelp|"/>
+		<meta property="og:description" content="USACO Help Website"/>
+		<meta property="og:image" content="http://michael153.github.io/usacohelp/Icons/favicon.png"/>
+		<meta name="keywords" content="michael153, michael wan, michaelwan, michaelwan2000, usacohelp, USACO, USACO Help">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/bootstrap.css" media="screen">
+
+		<style>
+			.navbar-inverse { }
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://michael153.github.io/usacohelp/index.html">USACOHelp</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="http://michael153.github.io/usacohelp/index.html">Home</a></li>
+						<li><a href="http://michael153.github.io/usacohelp/problems.html">Problems</a></li>
+						<li><a href="#">Submit</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+				<h2> Roadblocks (block)</h2>
+				<h4> Mirek Michalski, 2004 </h4>
+				<br><br>
+				Bessie has moved to a small farm and sometimes enjoys returning to visit one of her best friends. She does not want to get to her old home too quickly, because she likes the scenery along the way. She has decided to take the second-shortest rather than the shortest path. She knows there must be some second-shortest path.<br>
+				<br>
+				The countryside consists of <i>R</i> (1 &le; <i>R</i> &le; 100,000) bidirectional roads, each linking two of the <i>N</i> (1 &le; <i>N</i> &le; 5000) intersections, conveniently numbered 1..<i>N</i>. Bessie starts at intersection 1, and her friend (the destination) is at intersection <i>N</i>.<br>
+				<br>
+				The second-shortest path may share roads with any of the shortest paths, and it may backtrack i.e., use the same road or intersection more than once. The second-shortest path is the shortest path whose length is longer than the shortest path(s) (i.e., if two or more shortest paths exist, the second-shortest path is the one whose length is longer than those but no longer than any other path).<br>
+				<br>
+				<h4><b>Time Limit</b></h4>
+				1 second<br>
+				<br>
+				<h4><b>Input</b></h4>
+				Line 1: Two space-separated integers: <i>N</i> and <i>R</i><br>
+				Lines 2..<i>R</i>+1: Each line contains three space-separated integers: <i>A</i>, <i>B</i>, and <i>D</i> that describe a road that connects intersections <i>A</i> and <i>B</i> and has length <i>D</i> (1 &le; <i>D</i> &le; 5000)<br>
+				<br>
+				<h4><b>Output</b></h4>
+				Line 1: The length of the second shortest path between node 1 and node <i>N</i><br>
+				<br>
+				<h4><b>Sample Input</b></h4>
+				<tt>
+					4 4<br>
+					1 2 100<br>
+					2 4 200<br>
+					2 3 250<br>
+					3 4 100<br>
+				</tt>
+				<br>
+				<h4><b>Sample Output</b></h4>
+				<tt>
+					450<br>
+				</tt>
+				<br>
+				<h4><b>Output Details</b></h4>
+					Two routes: 1 -> 2 -> 4 (length 100 + 200 = 300) and 1 -> 2 -> 3 -> 4 (length 100 + 250 + 100 = 450)<br>
+				<br>
+				<br>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
 

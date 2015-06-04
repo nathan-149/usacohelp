@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>|USACOHelp|</title>
+		<link rel="icon" type="image/png" href="https://michael153.github.io/usacohelp/Icons/favicon.png">
+		<meta name="description" content="My Personal Website">
+
+		<meta property="og:title" content="|USACOHelp|"/>
+		<meta property="og:description" content="USACO Help Website"/>
+		<meta property="og:image" content="http://michael153.github.io/usacohelp/Icons/favicon.png"/>
+		<meta name="keywords" content="michael153, michael wan, michaelwan, michaelwan2000, usacohelp, USACO, USACO Help">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/bootstrap.css" media="screen">
+
+		<style>
+			.navbar-inverse { }
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://michael153.github.io/usacohelp/index.html">USACOHelp</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="http://michael153.github.io/usacohelp/index.html">Home</a></li>
+						<li><a href="http://michael153.github.io/usacohelp/problems.html">Problems</a></li>
+						<li><a href="#">Submit</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+				<h2> Corn Fields (cowfood) </h2>
+				<h4> Richard Ho, 2006 </h4>
+				<br><br>
+				Farmer John has purchased a lush new rectangular pasture composed of <i>M</i> by <i>N</i> (1 &le; <i>M</i> &le; 12; 1 &le; <i>N</i> &le; 12) square parcels. He wants to grow some yummy corn for the cows on a number of squares. Regrettably, some of the squares are infertile and can't be planted. Canny FJ knows that the cows dislike eating close to each other, so when choosing which squares to plant, he avoids choosing squares that are adjacent; no two chosen squares share an edge. He has not yet made the final choice as to which squares to plant.<br>
+				<br>
+				Being a very open-minded man, Farmer John wants to consider all possible options for how to choose the squares for planting. He is so open-minded that he considers choosing no squares as a valid option! Please help Farmer John determine the number of ways he can choose the squares to plant. <br>
+				<br>
+				<h4><b>Time Limit</b></h4>
+				1 second<br>
+				<br>
+				<h4><b>Input</b></h4>
+				* Line 1: Two space-separated integers: <i>M</i> and <i>N</i><br>
+				* Lines 2..<i>M</i> + 1: Line <i>i</i>+1 describes row <i>i</i> of the pasture with N space-separated integers indicating whether a square is fertile (1 for fertile, 0 for infertile)<br>
+				<br>
+				<h4><b>Output</b></h4>
+				* Line 1: One integer: the number of ways that FJ can choose the squares modulo 100,000,000<br>
+				<br>
+				<h4><b>Sample Input</b></h4>
+				<tt>
+					2 3<br>
+					1 1 1<br>
+					0 1 0<br>
+				</tt>
+				<br>
+				<h4><b>Sample Output</b></h4>
+				<tt>
+					9<br>
+				</tt>
+				<br>
+				<h4><b>Output Details</b></h4>
+				Number the squares as follows:<br>
+				<tt>
+					1 2 3<br>
+					&nbsp;&nbsp;4<br>
+				</tt>
+				There are four ways to plant only on one squares (1, 2, 3, or 4), three ways to plant on two squares (13, 14, or 34), 1 way to plant on three squares (134), and one way to plant on no squares. 4 + 3 + 1 + 1 = 9. <br>
+				<br>
+				<br>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
 

@@ -21,20 +21,32 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 		<style>
 			.navbar-inverse { }
-			
 			/* http://www.w3schools.com/css/css3_animations.asp */
-			@keyframes example
+			@keyframes jumbo
 			{
-    			0%   {left: -1500px;}
-    			10%  {left: 0px;}
-    			100% {left: 0px;}
+				0%   {left: -1500px; }
+				10%  {left: 0px; }
+				100% {left: 0px; }
+			}
+
+			@keyframes color
+			{
+				0% {color: #CD7F32;}
+				50% {color: silver;}
+				100% {color: gold;}
+			}
+
+			.WORK a
+			{
+				animation-name: color;
+				animation-duration: 100s;
 			}
 
 			.jumbotron
 			{
 				position: relative;
-				animation-name: example;
-				animation-duration: 10s;
+				animation-name: jumbo;
+				animation-duration: 15s;
 			} 
 		</style>
 	</head>
@@ -49,7 +61,9 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">USACOHelp</a>
+					<div class = "WORK">
+						<a class="navbar-brand" href="index.html">USACOHelp</a>
+					</div>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
