@@ -14,9 +14,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/stylesheet.css" media="screen">
-		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/github-light.css" media="screen">
-		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/stylesheets/bootstrap.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/usacohelp/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/usacohelp/stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/usacohelp/stylesheets/bootstrap.css" media="screen">
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
 		<style>
 			.navbar-inverse { }
@@ -45,7 +47,7 @@
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Search">
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<button type="submit" class="btn btn-default">Search</button>
 					</form>
 				</div>
 			</div>
@@ -86,6 +88,33 @@
 				The original board measures 8+5+8=21. The first cut will cost 21, and should be used to cut the board into pieces measuring 13 and 8. The second cut will cost 13, and should be used to cut the 13 into 8 and 5. This would cost 21+13=34. If the 21 was cut into 16 and 5 instead, the second cut would cost 16 for a total of 37 (which is more than 34). <br>
 				<br>
 				<br>
+			</div>
+			<div class = "col-md-3">
+				<h3> Submit </h3>
+				<form class="submission" method="POST" action="current/tpcm/submit-solution.php" enctype="multipart/form-data">
+					<div id="solution">
+						<input type="hidden" name="cpid" value="532"/>
+						<div class="field2">
+							<label for="language">Language:</label>
+							<select name="language">
+								<option value='1'>C</option>
+								<option value='2'>C++</option>
+								<option value='6'>C++11</option>
+								<option value='5'>Java</option>
+								<option value='8'>Pascal</option>
+								<option value='3'>Python 2.7.6</option>
+								<option value='4'>Python 3.4.0</option>
+							</select>
+						</div>
+						<div class="field2">
+							<label for="sourcefile">Source File:</label>
+							<input name="sourcefile" size="50" type="file" class="required"/>
+						</div>
+						<div class="field2">
+							<input name="solution-submit" id="solution-submit" type="submit" value="Submit Solution"/>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>
