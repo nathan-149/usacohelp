@@ -19,8 +19,10 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" media="screen">
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<style>
+			.chat { border-style: solid; }
+		</style>
 	</head>
-
 	<body>
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -35,11 +37,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class = "active"><a href="index.html">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="problems.html">Problems</a></li>
-						<li class = "active"><a href="learn.html">Learn</a></li>
+						<li><a href="learn.html">Learn</a></li>
 						<li><a href="#">Submit</a></li>
-						<li><a href="IRC.html">Chat</a></li>
+						<li class = "active"><a href="IRC.html">Chat</a></li>
 						<li><a href="contact.html">Contact Us</a></li>
 					</ul>
 					<form class="navbar-form navbar-right" role="search">
@@ -51,23 +53,11 @@
 				</div>
 			</div>
 		</nav>
-		<div class = "container">
-			<div class = "row">
-				<div class = "col-lg-12">
-					<div class = "jumbotron">
-						<h1> Learning Center </h1>
-						<p> This is the lobby for the Learning Center, the hub that connects you to all the resources! </p>
-					</div>
+		<div class = "row">
+			<div class = "col-md-8 col-md-offset-2">
+				<div class = "chat">
+					<iframe src="https://kiwiirc.com/client/irc.kiwiirc.com/?&theme=mini#usacohelp_lobby" style="border:0; width:100%; height:450px;"></iframe>
 				</div>
 			</div>
 		</div>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-62873848-1', 'auto');
-			ga('send', 'pageview');
-		</script>
 	</body>
-</html>
