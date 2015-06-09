@@ -53,9 +53,9 @@
                         <div class="form-group">
                             <label class="control-label" for="username">Username</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" ng-model="message.username">
+                                <input type="text" class="form-control" id="txtSearch1" ng-model="message.username" onkeydown="if (event.keyCode == 13) document.getElementById('enter1').click()" />
                                 <span class="input-group-btn" ng-click="attemptLogin()">
-                                    <button class="btn btn-success" type="button">Go Chat</button>
+                                    <button class="btn btn-success" type="button" id="enter1">Go Chat</button>
                                 </span>
                             </div>
                         </div>
@@ -88,12 +88,10 @@
                     <form ng-Show="loggedIn" ui-keypress="{13:'postMessage()'}">
                         <div class="form-group">
                             <div id="inputMessage" class="input-group">
-                                <input type="text" class="form-control" placeholder="Type Message Here" ng-model="message.text">
+                                <input type="text" class="form-control" placeholder="Type Message Here" ng-model="message.text" onkeydown="if (event.keyCode == 13) document.getElementById('enter2').click()">
                                 <span class="input-group-btn" ng-click="postMessage()">
-                                    <button class="btn btn-success" type="button">Send</button>
+                                    <button class="btn btn-success" type="button" id="enter2">Send</button>
                                 </span>
-                                <div key-press = "postMessage()" key="13">
-                                </div>
                             </div>
                         </div>
                     </form>

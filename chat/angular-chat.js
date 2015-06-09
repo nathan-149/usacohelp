@@ -23,7 +23,7 @@ function chatCtrl($rootScope, $http) {
    * Configurable global variables
    ***/
   $rootScope.chatChannel = "angular_chat";
-  $rootScope.messageLimit = 50;
+  $rootScope.messageLimit = 75;
   $rootScope.defaultUsername = "";
 
   /***
