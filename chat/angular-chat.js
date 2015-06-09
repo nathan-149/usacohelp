@@ -102,20 +102,23 @@ function chatCtrl($rootScope, $http) {
    * Precondition: loggedIn
    * Postcondition: message added to chatMessages and sent to chatLog
    ***/
-  $rootScope.postMessage = function() {
-
+  $rootScope.postMessage = function()
+  {
     //make sure they are logged in
-    if (!$rootScope.loggedIn) {
+    if (!$rootScope.loggedIn)
+    {
       $rootScope.errorMsg = "You must login first.";
       return;
     }
 
     //make sure they enter a chat message
-    if (!$rootScope.message.text) {
+    if (!$rootScope.message.text)
+    {
       $rootScope.errorMsg = "You must enter a message.";
       $("#inputMessage").addClass("error");
       return;
     }
+    $rootScope.message.text = ": " + $rootScope.message.text;
 
     //set the message date
     d = new Date();
