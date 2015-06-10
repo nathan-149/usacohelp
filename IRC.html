@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" ng-app="angular_chat">
 	<head>
 		<meta charset="UTF-8">
 		<title>|USACOHelp|</title>
@@ -17,8 +17,19 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" media="screen">
+		<link rel="stylesheet" href="chat/style.css">
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
+		<div pub-key="pub-c-0e6fb926-f616-48ed-b6dd-ed29bed1d05d" sub-key="sub-c-a2bb391a-0f03-11e5-bb77-0619f8945a4f" ssl="off" origin="pubsub.pubnub.com" id="pubnub"></div>
+		<script src="http://cdn.pubnub.com/pubnub-3.1.min.js"></script>
+		<script src="chat/angular-chat.js"></script>
+		<script src="jquery-1.11.3.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="jquery.js"></script>
 		<style>
 			.chat { border-style: solid; }
 		</style>
@@ -53,11 +64,93 @@
 				</div>
 			</div>
 		</nav>
-		<div class = "row">
+<!-- 		<div class = "row">
 			<div class = "col-md-8 col-md-offset-2">
 				<div class = "chat">
 					<iframe src="https://kiwiirc.com/client/irc.kiwiirc.com/?&theme=mini#usacohelp_lobby" style="border:0; width:100%; height:450px;"></iframe>
 				</div>
 			</div>
+		</div> -->
+		 <div class='container-fluid' ng-controller="chatCtrl">
+			<div class = "container">
+				<div class = "row">
+					<div class = "col-lg-16">
+						<div class="jumbotron">
+							<h1>Chat Server</h1>
+							<p>Using AngularJS and PubNub</p>
+						</div>
+					<div>
+						<!-- <p>&nbsp;</p> -->
+						<div ng-show="realtimeStatus == 0">
+							<span><h3 class="text-danger">Disconnected...</h3></span>
+						</div>
+						<div ng-show="realtimeStatus == 1">
+							<span><h3 class="text-info">Connecting...</h3></span>
+						</div>
+						<div ng-show="realtimeStatus == 2">
+							<span><h3 class="text-success">Connection Successful</h3></span>
+						</div>
+						<div class="alert alert-dismissible alert-info">
+							<button type="button" class="close" data-dismiss="alert">×</button>
+							Most Recent Messages Will Appear at the Top of the Chat Box
+						</div>
+						<div ng-show="loggedIn" id="logout">
+							<span ng-click="attemptLogout()"><a class="btn btn-warning">Log Out</a></span>
+						</div>
+					</div>
+					<br>
+					<div ng-show="errorMsg">
+						<i></i> <h3>Error: {{errorMsg}}</h3>
+					</div>
+					<div ng-Show="!loggedIn" id="login">
+						<h2>Login</h2>
+						<div class="form-group">
+							<label class="control-label" for="username">Username</label>
+							<div class="input-group">
+								<input type="text" class="form-control" id="txtSearch1" ng-model="message.username" onkeydown="if (event.keyCode == 13) document.getElementById('enter1').click()" />
+								<span class="input-group-btn" ng-click="attemptLogin()">
+									<button class="btn btn-success" type="button" id="enter1">Go Chat</button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div ng-Show="loggedIn" id="chat">
+						<table>
+							<tr ng-repeat="chat in chatMessages">
+								<!-- <td> -->
+								<td>
+									<b id="temp" style="color:#DE935D">{{chat.username}}</b> {{chat.text}}</br>
+									<!-- {{chat.text}} -->
+								</td>
+								<!-- <script type="text/javascript">
+								//document.getElementById("temp").style.color = a;
+								</script>
+								<small class="text-muted">
+									{{chat.date}} </br> {{chat.time}}
+								</small> -->
+								<!-- </td> -->
+								<!-- <td>
+									<p>   </p>
+								</td> -->
+								<!-- <td colspan="2" class="text-primary">{{chat.text}}</td> -->
+							</tr>
+							<tr ng-show="chatMessages.length == 0">
+								<td colspan="3">No messages yet!</td>
+							</tr>
+						</table>
+					</div>
+					<form ng-Show="loggedIn" ui-keypress="{13:'postMessage()'}">
+						<div class="form-group">
+							<div id="inputMessage" class="input-group">
+								<input type="text" class="form-control" placeholder="Type Message Here" ng-model="message.text" onkeydown="if (event.keyCode == 13) document.getElementById('enter2').click()">
+								<span class="input-group-btn" ng-click="postMessage()">
+									<button class="btn btn-success" type="button" id="enter2">Send</button>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</body>
+</html>
