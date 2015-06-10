@@ -121,6 +121,8 @@ function chatCtrl($rootScope, $http) {
 
     /*
     Handle the emoji replacements
+    Part 1: character translations
+    Part 2: "method" translations
     */
     $rootScope.message.text = $rootScope.message.text.replaceAll(">:(", "😡");
     $rootScope.message.text = $rootScope.message.text.replaceAll(">:)", "😈");
@@ -137,12 +139,43 @@ function chatCtrl($rootScope, $http) {
     $rootScope.message.text = $rootScope.message.text.replaceAll(":*", "😘");
     $rootScope.message.text = $rootScope.message.text.replaceAll("<3", "💜");
     $rootScope.message.text = $rootScope.message.text.replaceAll("</3", "💔");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("~@~", "💩");
+
+    
+
     $rootScope.message.text = $rootScope.message.text.replaceAll("watermelon()", "🍉");
     $rootScope.message.text = $rootScope.message.text.replaceAll("knife()", "🔪");
     $rootScope.message.text = $rootScope.message.text.replaceAll("money()", "💵");
     $rootScope.message.text = $rootScope.message.text.replaceAll("peace()", "✌");
     $rootScope.message.text = $rootScope.message.text.replaceAll("dog()", "🐶");
     $rootScope.message.text = $rootScope.message.text.replaceAll("banana()", "🍌");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("sun()", "🌞");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("fire()", "🔥");
+
+    $rootScope.message.text = $rootScope.message.text.replaceAll("poop()", "💩");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("poo()", "💩");
+
+    $rootScope.message.text = $rootScope.message.text.replaceAll("grandpa()", "👴");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("grandma()", "👵");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("angel()", "👼");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("alien()", "👽");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("sweat()", "💦");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("droplet()", "💧");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("okay()", "👌");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("ok()", "👌");
+    
+    $rootScope.message.text = $rootScope.message.text.replaceAll("boom()", "💥");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("BOOM()", "💥");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("pow()", "💥");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("POW()", "💥");
+
+    $rootScope.message.text = $rootScope.message.text.replaceAll("crown()", "👑");
+
+    $rootScope.message.text = $rootScope.message.text.replaceAll("arm()", "💪");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("bicep()", "💪");
+    $rootScope.message.text = $rootScope.message.text.replaceAll("biceps()", "💪");
+
+    $rootScope.message.text = $rootScope.message.text.replaceAll("bikini()", "👙");
 
     $rootScope.message.text = ": " + $rootScope.message.text;
 
