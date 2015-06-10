@@ -117,28 +117,16 @@
 					<div ng-Show="loggedIn" id="chat">
 						<table>
 							<tr ng-repeat="chat in chatMessages">
-								<!-- <td> -->
-								<td>
-									<b id="temp" style="color:#DE935D">{{chat.username}}</b> {{chat.text}}</br>
-									<!-- {{chat.text}} -->
-								</td>
-								<!-- <script type="text/javascript">
-								//document.getElementById("temp").style.color = a;
-								</script>
-								<small class="text-muted">
-									{{chat.date}} </br> {{chat.time}}
-								</small> -->
-								<!-- </td> -->
-								<!-- <td>
-									<p>   </p>
-								</td> -->
-								<!-- <td colspan="2" class="text-primary">{{chat.text}}</td> -->
+								<td> <b id="temp" style="color:#DE935D">{{chat.username}}</b> {{chat.text}}</br> </td>
 							</tr>
 							<tr ng-show="chatMessages.length == 0">
 								<td colspan="3">No messages yet!</td>
 							</tr>
 						</table>
 					</div>
+					<!-- <ul class="nav nav-list"> -->
+						<!-- <li ng-repeat="user in chatMessages"> <a ng-click="mention(user)">{{chat.username}}</a></li> -->
+					<!-- </ul> -->
 					<form ng-Show="loggedIn" ui-keypress="{13:'postMessage()'}">
 						<div class="form-group">
 							<div id="inputMessage" class="input-group">
