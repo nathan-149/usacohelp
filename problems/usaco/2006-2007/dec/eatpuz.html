@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>|USACOHelp|</title>
+		<link rel="icon" type="image/png" href="https://michael153.github.io/usacohelp/Icons/favicon.png">
+		<meta name="description" content="My Personal Website">
+
+		<meta property="og:title" content="|USACOHelp|"/>
+		<meta property="og:description" content="USACO Help Website"/>
+		<meta property="og:image" content="http://michael153.github.io/usacohelp/Icons/favicon.png"/>
+		<meta name="keywords" content="michael153, michael wan, michaelwan, michaelwan2000, usacohelp, USACO, USACO Help">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/usacohelp/stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/usacohelp/stylesheets/github-light.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://michael153.github.io/usacohelp/stylesheets/bootstrap.css" media="screen">
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+		<style>
+			.navbar-inverse { }
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://michael153.github.io/usacohelp/index.html">USACOHelp</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="http://michael153.github.io/usacohelp/index.html">Home</a></li>
+						<li><a href="http://michael153.github.io/usacohelp/problems.html">Problems</a></li>
+						<li><a href="learn.html">Learn</a></li>
+						<li><a href="#">Submit</a></li>
+						<li><a href="IRC.html">Chat</a></li>
+						<li><a href="http://michael153.github.io/usacohelp/contact.html">Contact Us</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+				<h2> The Eating Puzzle (eatpuz) </h2>
+				<h4> Rob Kolstad, 2006 </h4>
+				<br><br>
+				Bessie is on a diet where she can eat no more than <i>C</i> (10 &le; <i>C</i> &le; 35,000) calories per day. Farmer John is teasing her by putting out <i>B</i> (1 &le; <i>B</i> &le; 21) buckets of feed, each with some (potentially non-unique) number of calories (range: 1..35,000). Bessie has no self-control: once she starts on a feed bucket, she consumes all of it. <br>
+				<br>
+				Bessie is not so good at combinatorics. Determine the optimal combination of feed buckets that gives Bessie as many calories without exceeding the limit <i>C</i>. <br>
+				<br>
+				As an example, consider a limit of 40 calories and 6 buckets with 7, 13, 17, 19, 29, and 31 calories. Bessie could eat 7 + 31 = 38 calories but could eat even more by consuming three buckets: 7 + 13 + 19 = 39 calories. She can find no better combination. <br>
+				<br>
+				<h4><b>Time Limit</b></h4>
+				1 seconds<br>
+				<br>
+				<h4><b>Input</b></h4>
+				* Line 1: Two space-separated integers: <i>C</i> and <i>B</i><br>
+				* Line 2: <i>B</i> space-separated integers that respectively name the number of calories in bucket 1, 2, etc.<br>
+				<br>
+				<h4><b>Output</b></h4>
+				* Line 1: A single line with a single integer that is largest number of calories Bessie can consume and still stay on her diet<br>
+				<br>
+				<h4><b>Sample Input</b></h4>
+				<tt>
+					40 6<br>
+					7 13 17 19 29<br>
+				</tt>
+				<br>
+				<h4><b>Sample Output</b></h4>
+				<tt>
+					39<br>
+				</tt>
+				<br> <!-- add extra spacing to allow the text to "breathe" more -->
+				<br>
+			</div>
+			<div class = "col-md-3">
+				<h3> Submit </h3>
+				<form class="submission" method="POST" action="current/tpcm/submit-solution.php" enctype="multipart/form-data">
+					<div id="solution">
+						<input type="hidden" name="cpid" value="532"/>
+						<div class="field2">
+							<label for="language">Language:</label>
+							<select name="language">
+								<option value='1'>C</option>
+								<option value='2'>C++</option>
+								<option value='6'>C++11</option>
+								<option value='5'>Java</option>
+								<option value='8'>Pascal</option>
+								<option value='3'>Python 2.7.6</option>
+								<option value='4'>Python 3.4.0</option>
+							</select>
+						</div>
+						<div class="field2">
+							<label for="sourcefile">Source File:</label>
+							<input name="sourcefile" size="50" type="file" class="required"/>
+						</div>
+						<div class="field2">
+							<input name="solution-submit" id="solution-submit" type="submit" value="Submit Solution"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+
