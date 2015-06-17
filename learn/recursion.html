@@ -48,7 +48,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class = "active"><a href="index.html">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="problems.html">Problems</a></li>
 						<li class = "active"><a href="learn.html">Learn</a></li>
 						<li><a href="#">Submit</a></li>
@@ -66,10 +66,28 @@
 		</nav>
 		<div class = "row">
 			<div class = "col-md-6 col-md-offset-3">
-				Test: <br><br>
+				<h3>What is "recursion"?</h3>
+				<p>In plain English, it is the repeated application of a procedure. In computer science, it is when a function, method, or idea calls itself.</p><br>
+				<h3>Examples</h3>
+				<p>There are many examples of recursion, one famous one is the Fibonacci sequence. Let's say we have a function <tt>fib(x)</tt>.<br>We have <tt>fib(0) = fib(1) = 1 </tt>, and since the n<i>th</i> fibonacci number is the sum of the two numbers before it, we have <tt>fib(n) = fib(n-1) + fib(n-2)</tt>. Thus, we can define our simple function<sup>[1]</sup>:<br><br>
+				<tt>
+				fib(x):<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;if (x is <b>0</b> or <b>1</b>)<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return <b>1</b><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;else<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return fib(x-<b>1</b>) + fib(x-<b>2</b>)<br>
+				</tt><br>
+				We can clearly see how this is recursion, since this method calls itself twice. To better understand recursion, we can trace an example, such as <tt>fib(<b>6</b>)</tt>. We get the following diagram:</p>
+				<img src="img/fib_ex.jpg" alt="Fibonacci Example" height="269" width="616"><br>
+				There are plenty of other famous mathematical examples, such as the <a href = "https://en.wikipedia.org/wiki/Ackermann_function">Acckerman Function</a>, <a href = "https://en.wikipedia.org/wiki/Sierpinski_triangle">Sierpinski triangle</a>, and the <a href = "https://en.wikipedia.org/wiki/Apollonian_gasket">Apollonian Gasket</a>.
+				<h3>Problem Solving with Recursion</h3>
+				<p>Under construction...</p>
 				<div lang="latex">
-					\frac{123}{135}
 				</div>
+				<br><br><br><br><br><br><br><br><br><br>
+				<font size="1">[1]: There is a more efficient way to write this method, which utilizes <a href = "#">dynamic programming</a></font><br>
+				<br> <!-- breathing space -->
+				<br>
 			</div>
 		</div>
 	</body>
